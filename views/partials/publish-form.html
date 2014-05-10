@@ -1,0 +1,117 @@
+<div class="container">
+    <div class="header-container">
+    {{header}}
+    </div>
+    <div class="row body-container">
+
+            <form role="form">
+                <div class="col-md-6 ">
+                    <div class="form-group">
+                        <div class="col-md-6 col-md-offset-3">
+                            <label for="statusPublish">Status</label>
+                            <input type="text" class="form-control" id="statusPublish" ng-model="myForm.status">
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group">
+                        <label for="contentMessage">Message</label>
+                        <textarea name="message" id="contentMessage" class="form-control" ng-model="myForm.content.message" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="urlImage">Url image</label>
+                        <input type="url" class="form-control" ng-model="myForm.content.media.url" id="urlImage" placeholder="Enter url image">
+                    </div>
+                <div class=".radio-inline">
+                    <label>
+                        <input type="radio" ng-model="myForm.content.network"   value="facebook" checked>
+                        Facebook
+                    </label>
+                    <label>
+                        <input type="radio" ng-model="myForm.content.network" value="twitter">
+                        Twitter
+                    </label>
+                    <label>
+                        <input type="radio" ng-model="myForm.content.network" value="linkedin">
+                        Linkedin
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <label>Select Country:</label>
+                    </div>
+                    <div class="col-md-5">
+                        <select class="form-control" ng-model="countrySelected" ng-options="country.value for country in countries">
+                        </select>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <br>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <label>Select Language:</label>
+                    </div>
+                    <div class="col-md-5">
+
+                        <select class="form-control" ng-init="languageSelected" ng-model="languageSelected" ng-options="language.value for language in languages">
+                        </select>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <br>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <label>Select City:</label>
+                    </div>
+                    <div class="col-md-5">
+                        <select class="form-control" ng-model="citySelected" ng-options="city.value for city in cities">
+                        </select>
+                    </div>
+                </div>
+
+                <div class="clearfix"></div>
+                <br>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <label>Select Region:</label>
+                    </div>
+                    <div class="col-md-5">
+                        <select class="form-control" ng-model="regionSelected" ng-options="region.value for region in regions">
+                        </select>
+                    </div>
+                </div>
+                <br>
+                </div>
+            <div class="col-md-12">
+                <div class="col-md-6">
+                    <div class="col-md-4">
+                        <button ng-click="addTag()"  class="btn btn-default" >Add tag</button>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" ng-model="insertTag" class="form-control" />
+                    </div>
+
+                    <div class="col-md-12">
+
+                    </div>
+                </div>
+                <div class="col-md-6 form-group">
+                    <div class="col-md-4">
+                        <label>Select Channel:</label>
+                    </div>
+                    <div class="col-md-5">
+                        <select class="form-control" ng-model="channelSelected" ng-options="channel.name for channel in channels">
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <button ng-click="submitForm()" class="btn btn-success">Submit Item</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+

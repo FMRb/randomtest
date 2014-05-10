@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="header-container">
+    Publish content
+    </div>
+    <div class="row body-container">
+        <div class="col-md-12">
+            <a href="#/publishing/create" class="btn btn-default">Add new publish item</a>
+            <div class="publish-list">
+                <div ng-repeat="publish in publishes" class="col-md-4" >
+                    <div class="publish-container">
+                        <img ng-src="{{publish.content.media.url}}" />
+                        <p>{{publish.content.message}}</p>
+                        <img class="img-network" ng-src="/images/{{publish.content.network}}.png" alt="{{publish.content.network}}"/>
+                        <a href="#/publishing/{{publish.id}}" class="btn btn-default" >View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
